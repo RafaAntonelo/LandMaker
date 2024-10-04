@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/img/icone.png"  type="image/x-icon" style="width: 64px; height: 64px;">
+    <title>LandMaker - Desenvolvedor de Sites e LandingPage</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <img src="../static/img/logo4.png" alt="logo" class="logo">
+        <div class="itens-cabecalho">
+            <a href="#">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#orcamento">Orçamentos</a>
+            <a href="#contatos">Contatos</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="apresentacao">
+            <div class="paragrafo">
+                <h2><!--Transforme suas ideias em uma presença digital impactante.--> Somos especialistas em criar sites e landing pages que impulsionam o seu negócio. Fale conosco e comece agora!</h2>
+                <span><a href="#orcamento">Clique aqui</a> para entrar em contato!</span>
+            </div>
+            <img src="../static/img/programador2.png" alt="programador">
+        </section> 
+
+        <section class="sobre" id="sobre">
+            <h2>Sobre Nós...</h2>
+            <div class="container1">
+                <div class="item-sobre">
+                    <img src="../static/img/sobre.png" alt="sobre">
+                    <h4>A LandMaker nasceu para dar vida ao seu projeto digital, criando sites e landing pages sob medida para impulsionar seu negócio.</h4>
+                </div>
+                <div class="item-sobre">
+                    <img src="../static/img/sites.png" alt="sites">
+                    <h4>Criamos sites personalizados que atendem às suas necessidades, independentemente do ramo ou tamanho do seu negócio.</h4>
+                </div>
+                <div class="item-sobre">
+                    <img src="../static/img/landing.png" alt="landing">
+                    <h4>Desenvolvemos landing pages otimizadas para atrair e converter seus clientes de forma eficaz.</h4>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="item-sobre">
+                    <img src="../static/img/equipe.png" alt="equipe">
+                    <h4>Nossa equipe é formada por desenvolvedores altamente qualificados, com mais de 5 anos de experiência no mercado, prontos para entregar resultados excepcionais.</h4>
+                </div>
+                <div class="item-sobre">
+                    <img src="../static/img/garantia.png" alt="garantia">
+                    <h4>Entregamos projetos com garantia de satisfação. Se não ficar satisfeito, devolvemos o seu dinheiro!</h4>
+                </div>
+                <div class="item-sobre">
+                    <img src="../static/img/reuniao.png" alt="reuniao">
+                    <h4>Após o <a href="#orcamento">pedido de orçamento</a>, entraremos em contato rapidamente para desenvolvermos juntos o melhor projeto para o seu negócio.</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="orcamento" id="orcamento">
+            <div class="container1">
+                <h2>Solicite seu Orçamento</h2>
+            </div>
+             <form action="/enviarform" method="post" onsubmit="return validarContato()">
+                <input type="text" name="nome" id="nome" placeholder="Seu Nome" required>
+                <input type="text" name="email" id="email" placeholder="Seu Email" required>
+                <input type="text" name="contato" id="contato" placeholder="Seu Celular" required>
+                <textarea name="descricao" id="descricao" placeholder="Sua Necessidade" required></textarea>
+                <input type="submit" value="Enviar">
+             </form>           
+        </section>
+
+        <footer class="rodape" id="contatos">
+            <h4>Direitos reservados &copy; LandMaker 2024</h4>
+            <ul>
+                <li><img src="../static/img/email.png" alt="">landmaker@gmail.com</li>
+                <li class="zap"><img src="../static/img/zap.png" alt="">(11)98247-1992</li>
+            </ul>
+        </footer>
+    </main>
+    <script>
+       function validarContato() {
+            // Padrão de validação: apenas números, parênteses e hífens
+            const padrao = /^[0-9()-]+$/;
+            const contato = document.getElementById('contato');
+            const valorContato = contato.value;
+
+            // Verifica se o valor do contato segue o padrão
+            if (padrao.test(valorContato)) {
+                // Se o valor é válido, remove a classe de erro
+                contato.classList.remove("erro");
+                return true; // Permite o envio do formulário
+            } else {
+                // Se o valor é inválido, altera o placeholder, adiciona a classe de erro e impede o envio
+                contato.value = "";  // Limpa o campo
+                contato.placeholder = "* Valor inválido, digite seu contato novamente";
+                contato.classList.add("erro");  // Adiciona a classe de erro
+                return false;  // Impede o envio do formulário
+            }
+        }
+    </script>
+</body>
+</html>
