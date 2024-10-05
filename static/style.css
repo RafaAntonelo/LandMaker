@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* body{
+    /* background-color: #F0F4F8; */
+/* } */ 
+
+/*Header*/
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Lato";
+    font-size: 22px;
+    background-color: #457B9D;
+}
+.cabecalho .logo{
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+.itens-cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    
+}
+.itens-cabecalho a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+}
+.itens-cabecalho a:hover{
+    color: #A8DADC;
+}
+/*Header*/
+
+
+
+/*Seção apresentação*/
+.apresentacao{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center ;
+    color: #457B9D;
+    font-family: "Montserrat";
+    padding-top: 100px;
+    padding-bottom: 130px;
+    background-color: whitesmoke;
+    
+    
+}
+
+.apresentacao .paragrafo {
+    gap: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.apresentacao .paragrafo h2{
+    font-size: 35px;
+    width: 790px;
+}
+.apresentacao .paragrafo span{
+    font-size: 23px;
+}
+.apresentacao .paragrafo span a{
+    text-decoration: none;
+    color: #457B9D;
+    border: 0.4px solid #457B9D;
+    padding: 4px;
+    border-radius: 8px;
+    filter: drop-shadow(0px 0px 12px gray);
+}
+.apresentacao .paragrafo span a:hover{
+    background-color: #457B9D;
+    color: aliceblue;
+}
+.apresentacao img{
+    width: 500px;
+}
+/*Seção apresentação*/
+
+
+/* Seção Sobre */
+.sobre {
+    border-top:1px solid #f8ffff ;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza todos os elementos horizontalmente */
+    color: aliceblue;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background: linear-gradient(rgb(177, 219, 255),#557182);
+    /* background-color:#e2f6f6; */
+    gap: 80px;
+    font-weight: normal;
+    font-family: "Montserrat";
+}
+
+.sobre h2 {
+    font-size: 40px;
+    color: #2a4e64;
+    font-weight: 900;
+    text-align: center;
+    font-family: "Lato";
+}
+
+.sobre .container1, .sobre .container2 {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 110px; /* Espaçamento horizontal entre os itens */
+}
+
+.item-sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza a imagem e o texto */
+    text-align: center; /* Centraliza o texto */
+    gap: 20px;
+}
+
+.item-sobre img {
+    width: 180px;
+    filter: sepia(1) saturate(200%) hue-rotate(200deg) brightness(1.5);
+}
+
+.item-sobre h4 {
+    width: 420px; /* Garante a largura do texto */
+    text-align: center;
+    font-size: 17px;
+}
+
+.item-sobre a {
+    text-decoration: none;
+    color: #f0f8ff; 
+}
+
+
+/* Seção Sobre */
+
+/* Seção orcamento */
+.orcamento{
+    display: flex;
+    background-color: #f5f5f5;
+    padding: 60px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.orcamento .container1 h2{
+    font-size: 40px;
+    color: #2a4e64;
+    font-weight: 900;
+    font-family: "Lato";
+    text-decoration: none;
+}
+.orcamento form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    border: 0.7rem solid aliceblue;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 12px gray;
+    font-family: "Montserrat";
+}
+.orcamento form input, .orcamento form textarea{
+    width: 400px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 0.5px solid #457B9D;
+    color: #2a4e64;
+}
+
+.orcamento form input::placeholder, .orcamento form textarea::placeholder {
+    color: #2a4e64; /* Altere o valor para a cor desejada */
+    opacity: 0.8; /* Garante que a cor será totalmente opaca */
+}
+
+.orcamento form textarea{
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 200px;
+    max-height: 300px;
+}
+.orcamento form input[type="submit"]{
+    width: 300px;
+    box-sizing: content-box;
+    font-size: 23px;
+    background-color: #457B9D;
+    color: aliceblue;
+}
+.orcamento form input[type="submit"]:hover{
+    background-color: #2a4e64;
+    cursor: pointer;
+}
+/* Seção orcamento */
+
+
+/* Seção Footer */
+
+.rodape{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #457B9D;
+    color: aliceblue;
+    font-family: "Montserrat";
+    font-weight: bolder;
+    gap: 40px;
+    bottom: 0;
+}
+.rodape h4{
+    font-size: 18px;
+}
+.rodape ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-weight: normal;
+}
+.rodape ul li{
+ display: flex;
+ align-items: center;
+    
+    
+}
+.rodape ul li img{
+    width: 50px;
+    margin-right: -10px;
+}
+.zap{
+    margin-top: -20px;
+}
+/* Seção Footer */
+/* Estiliza o placeholder normalmente */
+input::placeholder {
+    color: #457B9D; /* cor padrão do placeholder */
+    font-size: 16px; /* tamanho de fonte padrão */
+}
+
+/* Estiliza o placeholder em vermelho e com fonte menor quando houver erro */
+input.erro::placeholder {
+    color: red !important; /* cor vermelha quando houver erro */
+    font-size: 12px; /* diminui o tamanho da fonte */
+}
+
+
+@media screen and (min-width:1600px) {
+    .sobre .container1, .sobre .container2 {
+        display: flex;
+        justify-content: center; /* Centraliza os itens horizontalmente */
+        gap: 220px; /* Espaçamento horizontal entre os itens */
+    }
+}
+
+
+
+
+
+/* responsive cabeçalho */
+@media screen and (max-width:1100px){
+    .cabecalho{
+        display: flex;
+        flex-direction: column;
+    }
+    .itens-cabecalho {
+        padding-bottom: 20px;
+        
+    }
+}
+@media screen and (max-width:650px){
+    .itens-cabecalho {
+        padding-bottom: 15px;
+        font-size: 16px;
+        gap: 40px;
+        
+    }
+}
+
+
+/* responsive apresentação */
+
+@media screen and (max-width:1380px){
+    .apresentacao{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .apresentacao img{
+        margin-top: 50px;
+        width: 400px;
+    }
+    .apresentacao .paragrafo{
+        gap: 40px;
+    }
+    .apresentacao .paragrafo h2{
+        font-size: 25px;
+    }
+    .apresentacao .paragrafo span{
+        font-size: 19px;
+    }
+}
+@media screen and (max-width:860px){
+    .apresentacao{
+        flex-direction: column;
+    }
+    .apresentacao img{
+        margin-top: 50px;
+        width: 350px;
+    }
+    .apresentacao .paragrafo{
+        gap: 35px;
+    }
+    .apresentacao .paragrafo h2{
+        margin: 0 auto;
+        font-size: 20px;
+        width: 90%;
+        
+    }
+    .apresentacao .paragrafo span{
+        margin: 0 auto;
+        font-size: 17px;
+        
+    }
+}
+
+
+/* reponsive sobre */
+@media screen and (max-width:1690px){
+    .sobre .container1, .sobre .container2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item-sobre{
+        flex-grow: 1;
+        flex-basis: 200;
+    }
+}
+@media screen and (max-width:700px){
+    .sobre h2{
+        font-size: 35px;
+    }
+    .item-sobre h4 {
+        width: 380px; /* Garante a largura do texto */
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .item-sobre img{
+        width: 150px;
+    }
+}
+
+/* responsive orcamento */
+
+@media screen and (max-width:1220px){
+    .orcamento{
+        display: flex;
+        flex-direction: column;
+    }
+    .orcamento form{
+        padding: 10px;
+        gap: 20px;
+    }
+    .orcamento .container1 h2{
+        margin-bottom: 30px;
+    }
+    .orcamento form input, .orcamento form textarea{
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:840px){
+    .orcamento .container1 h2{
+        font-size: 25px;
+    }
+    .orcamento form{
+        display: flex;
+        flex-direction: column;
+        width: 99%;
+        gap: 30px;
+        align-items: center;
+        border: 0.7rem solid aliceblue;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: aliceblue;
+        box-shadow: 0px 0px 12px gray;
+        font-family: "Montserrat";
+    }
+    .orcamento form input, .orcamento form textarea{
+        width: 90%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: 0.5px solid #457B9D;
+        color: #2a4e64;
+    }
+    
+    .orcamento form input::placeholder, .orcamento form textarea::placeholder {
+        color: #2a4e64; /* Altere o valor para a cor desejada */
+        opacity: 0.8; /* Garante que a cor será totalmente opaca */
+    }
+    
+    .orcamento form textarea{
+        min-width: 90%;
+        max-width:90%;
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .orcamento form input[type="submit"]{
+        width: 85%;
+        box-sizing: content-box;
+        font-size: 20px;
+        background-color: #457B9D;
+        color: aliceblue;
+    }
+}
+
+/* responsive footer */
+@media screen and (max-width:840px){
+    .rodape{
+        padding: 10px;
+    }
+    .rodape h4{
+        font-size: 15px;
+    }
+    .rodape ul{
+        gap: 10px;
+    }
+    .rodape ul li{
+        font-size: 15px;
+    }
+    .rodape ul li img{
+        width: 35px;
+        margin-right: -7px;
+    }
+}
